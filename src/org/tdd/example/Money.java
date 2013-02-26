@@ -35,4 +35,10 @@ public class Money {
 	public String toString() {
 		return amount + " " + currency;
 	}
+
+
+	public Money plus(Money dollar) {
+		// TODO Auto-generated method stub
+		return new Money(this.amount + dollar.amount, currency);
+	}
 }
