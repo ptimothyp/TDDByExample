@@ -18,8 +18,7 @@ public class MoneyTest extends TestCase {
 		assertTrue(Money.dollar(5).equals(Money.dollar(5)));
 		assertFalse(Money.dollar(6).equals(Money.dollar(5)));
 		assertTrue(Money.franc(5).equals(Money.franc(5)));
-		assertFalse(Money.franc(6).equals(Money.franc(5)));
-		
+		assertFalse(Money.franc(6).equals(Money.franc(5)));		
 		assertFalse(Money.franc(5).equals(Money.dollar(5)));
 	}
 	
@@ -39,8 +38,4 @@ public class MoneyTest extends TestCase {
 		assertEquals("CHF", Money.franc(1).currency());
 	}
 
-	@Test
-	public void testDifferentClassForEquality() {
-		assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
-	}
 }
