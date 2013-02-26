@@ -1,13 +1,10 @@
 package org.tdd.example;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
+import junit.framework.TestCase;
 
-public class MoneyTest {
-
-	@Test
-	public void testDollarMultiplication() {
+public class MoneyTest extends TestCase {
+	@Test public void testDollarMultiplication() {
 		Money five = Money.dollar(5);
 		assertEquals(Money.dollar(5), five);
 		assertEquals(Money.dollar(10), five.times(2));
